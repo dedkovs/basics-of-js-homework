@@ -21,3 +21,13 @@
  */
 
 // Your code here.
+
+const size = 8;
+let str = '';
+for (let i = 1; i <= size; i++) {
+  str +=
+    i % 2 === 0
+      ? ' #'.repeat(size / 2) + '\n'
+      : '# '.repeat(size / 2 + 1).slice(0, size) + '\n';
+}
+console.log(str);

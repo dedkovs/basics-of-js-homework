@@ -21,3 +21,17 @@
 // console.log(min(0, -10));
 // → -10
 //
+
+const min = (x, y) => (x < y ? x : y);
+
+const minArr = (arr) => {
+  let min = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < min) min = arr[i];
+  }
+  return min;
+};
+
+console.log(min(0, 10));
+console.log(min(0, -10));
+console.log(minArr([2, 4, -4, 10, 0, -9, 17]));

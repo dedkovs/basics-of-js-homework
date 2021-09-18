@@ -23,3 +23,23 @@
 // → [5, 4, 3, 2]
 // console.log(sum(range(1, 10)));
 // → 55
+
+const range = (begin, end, step = 1) => {
+  const arr = [];
+  let currentNumber = begin;
+  while (true) {
+    arr.push(currentNumber);
+    currentNumber += step;
+    if (
+      (begin >= end && currentNumber < end) ||
+      (begin <= end && currentNumber > end)
+    )
+      return arr;
+  }
+};
+
+const sum = (arr) => arr.reduce((total, currentValue) => total + currentValue);
+
+console.log(range(1, 10));
+console.log(range(5, 2, -1));
+console.log(sum(range(1, 10)));
